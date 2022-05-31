@@ -1,8 +1,10 @@
 package com.parkit.parkingsystem.model;
 
-import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * Ticket model.
+ */
 public class Ticket {
     private int id;
     private ParkingSpot parkingSpot;
@@ -10,6 +12,7 @@ public class Ticket {
     private double price;
     private Date inTime;
     private Date outTime;
+    private boolean isRecurringClient = false;
 
     public int getId() {
         return id;
@@ -58,4 +61,13 @@ public class Ticket {
     public void setOutTime(Date outTime) {
         this.outTime = outTime;
     }
+
+    public boolean isRecurringClient() {
+        return isRecurringClient;
+    }
+
+    public void setRecurringClient(boolean recurringClient) {
+        isRecurringClient = recurringClient;
+    }
+
 }
